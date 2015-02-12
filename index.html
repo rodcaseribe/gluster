@@ -92,7 +92,42 @@ Crie um diretório /gluster/data<br>
 
 Crei um volume</p>
 
+<code><pre>$gluster volume create testvol replica 2 transport tcp server1.example.com:/data server2.example.com:/data</pre></code>
 
+<p> Start o volume</p>
+
+<code><pre>$gluster volume start testvol</pre></code>
+
+<p></p>Adicione no fstab para montar no boot.</p>
+
+<code><pre>$nano /etc/fstab</pre></code>
+
+<p><code>
+  @aero-no1:~$ cat /etc/fstab<br>
+# /etc/fstab: static file system information.<br>
+#
+# Use 'blkid' to print the universally unique identifier for a<br>
+# device; this may be used with UUID= as a more robust way to name devices<br>
+# that works even if disks are added and removed. See fstab(5).<br>
+#<br>
+# <file system> <mount point>   <type>  <options>       <dump>  <pass><br>
+# / was on /dev/md0 during installation<br>
+UUID=f8cef5df-a65b-4407-b3a1-cf2a1b1cb6b1 /               ext4    errors=remount-ro 0       1<br>
+# /gluster/data was on /dev/sdb1 during installation<br>
+/dev/sdb1 /home   ext4    defaults        0       2<br>
+aero-no1:/clusteraero	/share	glusterfs	defaults,_netdev	0	0<br>
+aero-no2:/clusteraero   /share  glusterfs       defaults,_netdev        0       0<br>
+aero-no3:/clusteraero   /share  glusterfs       defaults,_netdev        0       0<br>
+aero-no4:/clusteraero   /share  glusterfs       defaults,_netdev        0       0<br>
+aero-no5:/clusteraero   /share  glusterfs       defaults,_netdev        0       0<br>
+<br>
+# swap was on /dev/md1 during installation<br>
+UUID=2d165a0d-99eb-4879-bbcf-761fa81f8712 none            swap    sw              0       0<br>
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0<br>
+/dev/sdd1       /media/usb0     auto    rw,user,noauto  0       0<br>
+
+  
+</code></p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
