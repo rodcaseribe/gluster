@@ -35,7 +35,10 @@
 <p>primeiro de tudo...</p><br>
 <p><a href="" class="user-mention">*Habilite o IPV6 em seu firewall.<br>
 *Use IP estático em cada nó.</a></p>
+<br>
+<p>Na minha conf de rede habiltei o ipv6 pra fins de testes mesmo pra diminuir os warns dentro de:</p>
 
+<pre><code>$/var/log/glusterfs/etc-glusterfs-glusterd.vol.log</code></pre>
 <pre><code>$ nano /etc/network/interfaces<br>
 allow-hotplug eth0<br>
 iface eth0 inet static<br>
