@@ -16,7 +16,7 @@
     
       <div class="container">                                                                                                
         <!--<h4 style="color:#009900">$service glusterfs-server start</h4>--><p><code><pre><img align="left" width="140px" height="140px" src="https://scontent-a-lga.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10256548_502102143224980_7052077904325764368_n.jpg?oh=43c02c75e8899a6061c264488bb4f94a&oe=554E75BC"></img>
-        <h3 align="middle"> -->">Rodolfo Cr</h3><h3 align="middle">undergroundiscovery@gmail.com</h3><br><br><h5 align="left" "style="color:#880000"><img width="40px" height="40px" src="http://icons.iconarchive.com/icons/social-media-icons/social-buntings/512/Github-icon.png"></img></h5></pre></code></p>
+        <h3 align="middle"> -->">Rodolfo Cr</h3><h3 align="middle">undergroundiscovery@gmail.com</h3><br><br><h5 align="left" "style="color:#880000"><img width="40px" height="40px" src="http://icons.iconarchive.com/icons/social-media-icons/social-buntings/512/Github-icon.png"><a href="https://github.com/rodcaseribe"></a></img></h5></pre></code></p>
         <!--<h2 align="center">Tutorial Glusterfs</h2>-->    
         <!--<section id="downloads">
           <a href="https://github.com/rodcaseribe/guster/zipball/master" class="btn">Download as .zip</a>
@@ -34,7 +34,7 @@
 <a href="http://i.imgur.com/Yf8ta7S.png"><img src="http://i.imgur.com/Yf8ta7S.png"></img></a>
 <p>primeiro de tudo...</p><br>
 <p><a href="" class="user-mention">*Habilite o IPV6 em seu firewall.<br>
-*Use IP estático em cada nó.</a></p>
+*Use IP estático em cada nó nessa configuração.</a></p>
 <br>
 <p>Na minha conf de rede habiltei o ipv6 pra fins de testes mesmo pra diminuir os warns dentro de:</p>
 
@@ -65,7 +65,7 @@ iface eth0 inet static<br>
 
 <code><pre>$apt-get install glusterfs-server</pre></code>
 
-<p>Veja se realmente o glusterfs está rodando e rebote todas as máquinas, se possível baixe numa vm de teste com ubuntu pra ver onde os arquivos estão caindo na instalação, caso não não esteja rodando o sistema verifique os arquivos da VM com os que estão do debian wheezy, provavelmente está faltando arquivo caso isso ocorra.verifique:</p>
+<p>Veja se realmente o glusterfs está rodando e rebote todas as máquinas, se possível baixe numa vm de teste com ubuntu pra ver onde os arquivos estão caindo na instalação, caso não esteja rodando o sistema verifique os arquivos da VM com os que estão do debian wheezy, provavelmente está faltando arquivo caso isso ocorra.verifique:</p>
 
 <code><pre>$/etc/init.d/glusterfs-server status</pre></code>
 
@@ -88,7 +88,7 @@ formate e monte.
 <code><pre>$cfdisk /dev/sdb1<br>
 $mount -t ext4 /dev/sdb1 /home</pre></code>
 
-<p>Do modo que será feito abaixo o gluster ficará no sda, e o home no sdb, para os usuários ficarem independetens  e não compartilhados no gluster, não será necessário a formatação e montagem.</p>
+<p>Do modo que será feito abaixo o gluster ficará no sda, e o home no sdb, para os usuários ficarem independentes  e não compartilhados no gluster, não será necessário a formatação e montagem.</p>
 <br>
 <p>Crie um diretŕio  /share<br>
 Crie um diretório /gluster/data<br>
